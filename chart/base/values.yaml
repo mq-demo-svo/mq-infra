@@ -51,20 +51,13 @@ queuemanager:
 
 storage:
   persistedData:
-    # enabled: false
-    class: ibmc-file-gold-gid
-    deleteClaim: false
-    enabled: true
-    type: persistent-claim    
+    enabled: false
   queueManager:
-    # type: ephemeral
-    type: persistent-claim
-    class: ibmc-file-gold-gid
+    type: ephemeral
     hatype: persistent-claim
     size: 2Gi
   recoveryLogs:
     enabled: false
-  defaultClass: ibmc-file-gold-gid
 
 availability:
   type: SingleInstance

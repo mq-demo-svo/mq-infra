@@ -63,7 +63,7 @@ storage:
     hatype: persistent-claim
     size: 2Gi
   recoveryLogs:
-    enabled: true
+    enabled: false
   defaultClass: ibmc-file-gold-gid
 
 availability:

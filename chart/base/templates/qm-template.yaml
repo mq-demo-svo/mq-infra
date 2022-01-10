@@ -44,7 +44,11 @@ spec:
         enabled: {{ .Values.storage.persistedData.enabled }}
       queueManager:
         type: {{ .Values.storage.queueManager.type }}
+        {{ if eq .Values.storage.queueManager.type "ephemeral" }}
         size: ~
+        {{ else }}
+        size: {{ .Values.storage.queueManager.size }}
+        {{ end }}
       recoveryLogs:
         enabled: {{ .Values.storage.recoveryLogs.enabled }}
     {{ end }}

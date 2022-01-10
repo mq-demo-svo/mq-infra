@@ -44,6 +44,7 @@ spec:
         enabled: {{ .Values.storage.persistedData.enabled }}
       queueManager:
         type: {{ .Values.storage.queueManager.type }}
+        size: ~
       recoveryLogs:
         enabled: {{ .Values.storage.recoveryLogs.enabled }}
     {{ end }}

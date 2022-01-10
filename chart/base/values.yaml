@@ -55,7 +55,7 @@ storage:
   queueManager:
     type: ephemeral
     hatype: persistent-claim
-    size: {}
+    size: ~
   recoveryLogs:
     enabled: false
 
